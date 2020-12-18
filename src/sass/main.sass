@@ -1,3 +1,32 @@
+// Importing Normalize.css
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css)
+
+// Importing Exo2 fonts from google fonts
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap')
+  
 body
-  background: #000
-  color: #fff
+  height: 100vh
+  width: 100vw
+  display: flex
+  justify-content: center
+  align-items: center
+  background: hsl(0, 0%, 0%)
+  color: hsl(0, 0%, 100%)
+  font-family: ('Exo 2', 'Helvetica', 'Arial', sans-serif)
+  font-size: 20px
+
+#game-board
+  background: hsl(0, 0%, 80%)
+  width: 100vmin
+  height: 100vmin
+  display: grid
+  grid-template-columns: repeat(21, 1fr)
+  grid-template-rows: repeat(21, 1fr)
+
+.snake
+  background: hsl(200, 50%, 50%)
+  border: .25vmin solid black
+
+.food
+  background: hsl(50, 100%, 50%)
+  border: .25vmin solid hsl(0, 0%, 0%)
