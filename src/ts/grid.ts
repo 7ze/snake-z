@@ -8,5 +8,11 @@ export const randomGridPosition = () => {
   return { x: getRandom(GRID_SIZE), y: getRandom(GRID_SIZE) };
 };
 
-console.log(getRandom(21));
-console.log(randomGridPosition());
+export function isOutsideGrid(position: { x: number; y: number }): boolean {
+  return (
+    position.x < 1 ||
+    position.x > GRID_SIZE ||
+    position.y < 1 ||
+    position.y > GRID_SIZE
+  );
+}

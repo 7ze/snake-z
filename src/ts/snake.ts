@@ -28,14 +28,26 @@ export const draw = (gameBoard: HTMLDivElement): void => {
   });
 };
 
-export const snakeIsOnPosition = (position: { x: number; y: number }) => {
-  return snakeBody.some((segment) => {
+export const snakeIsOnPosition = (
+  position: { x: number; y: number },
+  { ignoreHead = false } = {}
+) => {
+  return snakeBody.some((segment, index) => {
+    if (ignoreHead && !index) return false;
     return equalsPosition(segment, position);
   });
 };
 
+export const isIntersected = () => {
+  return snakeIsOnPosition(getSnakeHead(), { ignoreHead: true });
+};
+
 export const expandSnake = (growth: number) => {
   newSegments += growth;
+};
+
+export const getSnakeHead = () => {
+  return snakeBody[0];
 };
 
 const equalsPosition = (
