@@ -4,23 +4,24 @@
   "description": "A simple implementation of snake using Typescript",
   "main": "index.html",
   "scripts": {
+    "clean": "rm -r dist/",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build --public-url . src/index.html"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/The-sad-philosopher/snake-game-ts.git"
+    "url": "git+https://github.com/7ze/snake-game-ts.git"
   },
   "keywords": [
     "typescript",
     "snake-game"
   ],
-  "author": "The-sad-philosopher",
+  "author": "7ze",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/The-sad-philosopher/snake-game-ts/issues"
+    "url": "https://github.com/7ze/snake-game-ts/issues"
   },
-  "homepage": "https://github.com/The-sad-philosopher/snake-game-ts#readme",
+  "homepage": "https://github.com/7ze/snake-game-ts#readme",
   "devDependencies": {
     "@types/node": "^14.14.14",
     "parcel-bundler": "^1.12.4",
